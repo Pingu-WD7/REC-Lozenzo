@@ -19,9 +19,13 @@ import java.util.List;
 public class MissaoVooController {
 
     private final MissaoVooService missaoVooService;
+    private final DroneController droneController;
+    private final PilotoController pilotoController;
 
-    public MissaoVooController(MissaoVooService missaoVooService) {
+    public MissaoVooController(MissaoVooService missaoVooService, DroneController droneController, PilotoController pilotoController) {
         this.missaoVooService = missaoVooService;
+        this.droneController = droneController;
+        this.pilotoController = pilotoController;
     }
 
     @Operation(summary = "Lista as missoes de voo com filtros opcionais")
@@ -33,12 +37,14 @@ public class MissaoVooController {
     ) {
         // TODO: ligar a rota à lógica de consulta das missões.
         return missaoVooService.listar(status, localOperacao, dataPrevista);
+
     }
 
     @Operation(summary = "Busca uma missao de voo por ID")
     @GetMapping("/{id}")
     public MissaoVooResponseDTO buscarPorId(@PathVariable Long id) {
         // TODO: buscar uma missão específica.
+
         return missaoVooService.buscarPorId(id);
     }
 
