@@ -67,13 +67,11 @@ public class DroneService {
     private DroneResponseDTO toResponse(Drone drone) {
         return new DroneResponseDTO(
                 drone.getIdDrone(),
-                //TODO: buscar atributos do drone conforme registro.
                 drone.getIdentificador(),
                 drone.getModelo(),
                 drone.getAutonomiaMinutos(),
                 drone.getDisponivel()
-
-
+                //TODO: buscar atributos do drone conforme registro.
         );
     }
 }

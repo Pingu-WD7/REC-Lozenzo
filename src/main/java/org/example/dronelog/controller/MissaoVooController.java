@@ -1,5 +1,6 @@
 package org.example.dronelog.controller;
 
+import jakarta.validation.Valid;
 import org.example.dronelog.dto.MissaoVooRequestDTO;
 import org.example.dronelog.dto.MissaoVooResponseDTO;
 import org.example.dronelog.model.StatusMissao;
@@ -39,20 +40,23 @@ public class MissaoVooController {
     }
 
     @PostMapping
-    public MissaoVooResponseDTO cadastrar(@RequestBody MissaoVooRequestDTO dto) {
+    public MissaoVooResponseDTO cadastrar(@RequestBody @Valid MissaoVooRequestDTO dto) {
         // TODO: registrar a missão considerando os vínculos necessários.
         return missaoVooService.cadastrar(dto);
     }
 
     @PutMapping("/{id}")
-    public MissaoVooResponseDTO atualizar(@PathVariable Long id, @RequestBody MissaoVooRequestDTO dto) {
+    public MissaoVooResponseDTO atualizar(@PathVariable Long id, @RequestBody @Valid MissaoVooRequestDTO dto) {
         // TODO: atualizar uma missão já cadastrada.
-        return missaoVooService.atualizar(id, dto);
+        if (dto.status() == StatusMissao.CONCLUIDA) {
+            return missaoVooService.atualizar(id, dto);
+        }
+        return null;
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
         // TODO: remover uma missão quando for permitido.
+        missaoVooService.deletar(id);
         return ResponseEntity.noContent().build();
     }
 }

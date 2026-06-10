@@ -15,6 +15,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> tratarRegra(RegraDeNegocioException ex) {
         Map<String, String> erro = new HashMap<>();
         erro.put("erro", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
+    }
+    @ExceptionHandler(RegraDeNegocioException.class)
+    public ResponseEntity<Map<String, String>> recursoNaoEncontrado(RegraDeNegocioException ex) {
+        Map<String, String> erro = new HashMap<>();
+        erro.put("erro", ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(erro);
     }
 

@@ -1,5 +1,6 @@
 package org.example.dronelog.controller;
 
+import jakarta.validation.Valid;
 import org.example.dronelog.dto.PilotoRequestDTO;
 import org.example.dronelog.dto.PilotoResponseDTO;
 import org.example.dronelog.service.PilotoService;
@@ -26,7 +27,7 @@ public class PilotoController {
     }
 
     @PutMapping("/{id}")
-    public PilotoResponseDTO atualizar(@PathVariable Long id, @RequestBody PilotoRequestDTO dto) {
+    public PilotoResponseDTO atualizar(@PathVariable Long id, @RequestBody @Valid PilotoRequestDTO dto) {
         // TODO: finalizar o fluxo de atualização.
         return pilotoService.atualizar(id, dto);
     }
@@ -34,6 +35,7 @@ public class PilotoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
         // TODO: encaminhar a remoção para a camada adequada.
+        pilotoService.deletar(id);
         return ResponseEntity.noContent().build();
     }
 }

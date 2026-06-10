@@ -3,6 +3,7 @@ package org.example.dronelog.service;
 import org.example.dronelog.dto.PilotoRequestDTO;
 import org.example.dronelog.dto.PilotoResponseDTO;
 import org.example.dronelog.model.Piloto;
+import org.example.dronelog.repository.MissaoVooRepository;
 import org.example.dronelog.repository.PilotoRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +15,17 @@ public class PilotoService {
     //TODO: colocar construtor para chamar métodos.
 
     final PilotoRepository pilotoRepository;
+    final MissaoVooRepository missaoVooRepository;
 
-    public PilotoService(PilotoRepository pilotoRepository) {
+    public PilotoService(PilotoRepository pilotoRepository, MissaoVooRepository missaoVooRepository) {
         this.pilotoRepository = pilotoRepository;
+        this.missaoVooRepository = missaoVooRepository;
     }
 
     public List<PilotoResponseDTO> listar(String nome) {
         // TODO: usar o parâmetro recebido quando fizer sentido.
-        return pilotoRepository.findAll().stream().map(this::toResponse).toList();
+        return pilotoRepository.findByNomeContainingIgnoreCase(nome).stream().map(this::toResponse).toList();
+
     }
 
     public PilotoResponseDTO buscarPorId(Long id) {
@@ -60,6 +64,9 @@ public class PilotoService {
         // TODO: decidir como tratar pilotos com missões vinculadas.
 
         pilotoRepository.delete(piloto);
+        if (missaoVooRepository.existsById(id)) {
+            throw new RuntimeException("ERRO o piloto tem uma missao cadastrada, não é possível deletar");
+        }
 
     }
 

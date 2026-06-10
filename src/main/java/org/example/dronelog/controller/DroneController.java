@@ -2,6 +2,7 @@ package org.example.dronelog.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.example.dronelog.dto.DroneRequestDTO;
 import org.example.dronelog.dto.DroneResponseDTO;
 import org.example.dronelog.service.DroneService;
@@ -34,12 +35,12 @@ public class DroneController {
     }
 
     @PostMapping
-    public DroneResponseDTO cadastrar(@RequestBody DroneRequestDTO dto) {
+    public DroneResponseDTO cadastrar(@RequestBody @Valid DroneRequestDTO dto) {
         return droneService.cadastrar(dto);
     }
 
     @PutMapping("/{id}")
-    public DroneResponseDTO atualizar(@PathVariable Long id, @RequestBody DroneRequestDTO dto) {
+    public DroneResponseDTO atualizar(@PathVariable Long id, @RequestBody @Valid DroneRequestDTO dto) {
         // TODO: conferir se a atualização segue o mesmo padrão do cadastro.
         return droneService.atualizar(id, dto);
     }

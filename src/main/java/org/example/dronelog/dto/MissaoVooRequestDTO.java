@@ -1,5 +1,6 @@
 package org.example.dronelog.dto;
 
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import org.example.dronelog.model.StatusMissao;
@@ -9,7 +10,6 @@ import java.time.LocalDate;
 public record MissaoVooRequestDTO(
         //TODO: pedir atributos para criar registro.
 
-        Long idMissao,
         @NotBlank(message = "A missao precisa de um titulo")
         String titulo,
 
@@ -17,6 +17,7 @@ public record MissaoVooRequestDTO(
         String localOperacao,
 
         @NotNull(message = " O campo da data prevista deve ser preenchido")
+        @FutureOrPresent(message = "A data prevista deve ser hoje ou nao ")
         LocalDate dataPrevista,
 
         @NotNull(message = " A area deve ser informada")

@@ -13,8 +13,10 @@ public class SwaggerConfig {
         // TODO: deixar a documentação compatível com o tema da API.
         return new OpenAPI()
                 .info(new Info()
-                        .title("")
+                        .title(" Dronelog API")
                         .version("1.0")
-                        .description(""));
+                        .description(" API para gerenciamento de operações com drones em campo. Deve Permite cadastrar, " +
+                                "listar, atualizar e deletar drones, alem de registrar os voos realizados " +
+                                "por cada drone."));
     }
 }

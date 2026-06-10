@@ -27,26 +27,39 @@ public class MissaoVooService {
 
     public List<MissaoVooResponseDTO> listar(StatusMissao status, String localOperacao, LocalDate dataPrevista) {
         // TODO: construir a listagem e os filtros necessários.
-        return List.of();
+        return missaoVooRepository.findAll().stream().map(this::toResponse).toList();
     }
 
     public MissaoVooResponseDTO buscarPorId(Long id) {
         // TODO: localizar e converter a missão.
-        return null;
+        return toResponse( buscarMissao (id));
     }
 
     public MissaoVooResponseDTO cadastrar(MissaoVooRequestDTO dto) {
         // TODO: montar a entidade, preencher dados simples e resolver vínculos.
-        return null;
+            MissaoVoo missao = new MissaoVoo();
+            missao.setTitulo(dto.titulo());
+            missao.setLocalOperacao(dto.localOperacao());
+            missao.setDataPrevista(dto.dataPrevista());
+            missao.setAreaMapeadaKm2(dto.areaMapeadaKm2());
+            missao.setStatus(StatusMissao.PENDENTE);
+        return toResponse(missaoVooRepository.save(missao));
     }
 
     public MissaoVooResponseDTO atualizar(Long id, MissaoVooRequestDTO dto) {
         // TODO: recuperar o registro existente e aplicar alterações permitidas.
-        return null;
+            MissaoVoo missao = buscarMissao(id);
+            missao.setTitulo(dto.titulo());
+            missao.setLocalOperacao(dto.localOperacao());
+            missao.setDataPrevista(dto.dataPrevista());
+            missao.setAreaMapeadaKm2(dto.areaMapeadaKm2());
+        return toResponse(missaoVooRepository.save(missao));
     }
 
     public void deletar(Long id) {
         // TODO: remover o registro correto.
+            MissaoVoo missao = buscarMissao(id);
+            missaoVooRepository.delete(missao);
     }
 
     private MissaoVoo buscarMissao(Long id) {
@@ -56,6 +69,14 @@ public class MissaoVooService {
 
     private MissaoVooResponseDTO toResponse(MissaoVoo missao) {
         // TODO: transformar a entidade em resposta sem expor objetos inteiros.
-        return null;
+
+        return new MissaoVooResponseDTO(
+             missao.getIdMissao(),
+             missao.getTitulo(),
+             missao.getLocalOperacao(),
+             missao.getDataPrevista(),
+             missao.getAreaMapeadaKm2(),
+             missao.getStatus()
+        );
     }
 }

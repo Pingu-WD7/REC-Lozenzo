@@ -4,7 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6e8ea55-31d7-446e-b14c-9ae237cce27e" name="Changes" comment="" />
+    <list default="true" id="f6e8ea55-31d7-446e-b14c-9ae237cce27e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/DroneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/DroneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/MissaoVooController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/MissaoVooController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/PilotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/controller/PilotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/DroneRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/DroneRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/MissaoVooRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/MissaoVooRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/MissaoVooResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/MissaoVooResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/PilotoRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/dto/PilotoRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/Drone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/Drone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/MissaoVoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/MissaoVoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/Piloto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/Piloto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/StatusMissao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/model/StatusMissao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/DroneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/DroneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/MissaoVooService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/MissaoVooService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/PilotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dronelog/service/PilotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/config/SwaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/controller/MissaoVooController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/controller/MissaoVooController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/controller/PilotoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/controller/PilotoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/DroneRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/DroneRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/MissaoVooRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/MissaoVooRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/MissaoVooResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/MissaoVooResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/PilotoRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/dto/PilotoRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/Drone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/Drone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/MissaoVoo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/MissaoVoo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/Piloto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/Piloto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/StatusMissao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/model/StatusMissao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/DroneService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/DroneService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/MissaoVooService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/MissaoVooService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/PilotoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dronelog/service/PilotoService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +48,21 @@
       <entry key="_C:/Users/Felipe/Desktop/rec-dronelog-main/rec-dronelog-main" value="3EuzbF9XFg8OaEXbbReFhtWtfZ9" />
     </persistenceIdMap>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Pingu-WD7"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Pingu-WD7/REC-Lozenzo.git",
+    "accountId": "41bb317a-c993-4923-be83-35af8f0da8a5"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6,
   "fromUser": false
@@ -26,12 +74,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.DronelogApplicationTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.DronelogApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Felipe/Desktop/rec-dronelog-main/rec-dronelog-main",

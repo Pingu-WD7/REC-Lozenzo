@@ -4,5 +4,5 @@ public enum StatusMissao {
     PLANEJADA,
     EM_ANDAMENTO,
     CONCLUIDA,
-    CANCELADA
+    PENDENTE, CANCELADA
 }

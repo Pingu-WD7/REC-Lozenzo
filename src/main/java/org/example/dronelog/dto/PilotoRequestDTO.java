@@ -7,9 +7,11 @@ import jakarta.validation.constraints.NotNull;
 public record PilotoRequestDTO(
 
 
-         @NotBlank(message = "O nome do piloto é obrigatório.")
+
+         @Email(message = "O email do piloto deve ser válido.")
          String email,
 
+         @NotBlank(message = "O registro da ANAC do piloto é obrigatorio.")
          String registroAnac,
 
          @NotBlank(message = "O email do piloto é obrigatorio.")

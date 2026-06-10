@@ -12,6 +12,8 @@ import java.time.LocalDate;
 public class MissaoVoo {
 
     //TODO: garantir integridade de PK para os registros da entidade.
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMissao;
 
     private String titulo;
@@ -26,12 +28,12 @@ public class MissaoVoo {
     private StatusMissao status;
 
     // TODO: relacionar corretamente com o responsável pela operação.
-    @OneToOne(mappedBy = "piloto")
-    @JoinColumn(name = "id_piloto")
-    private Piloto piloto;
+   @ManyToOne
+   @JoinColumn(name = "id_piloto")
+   private Piloto piloto;
 
     // TODO: relacionar corretamente com o equipamento/drone utilizado.
-    @OneToOne(mappedBy = "drone")
+    @ManyToOne
     @JoinColumn(name = "id_drone")
     private Drone drone;
 

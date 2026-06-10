@@ -13,6 +13,8 @@ import java.util.List;
 @Setter
 public class Piloto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPiloto;
     private String nome;
     private String registroAnac;
