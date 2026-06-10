@@ -15,8 +15,8 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title(" Dronelog API")
                         .version("1.0")
-                        .description(" API para gerenciamento de operações com drones em campo. Deve Permite cadastrar, " +
-                                "listar, atualizar e deletar drones, alem de registrar os voos realizados " +
+                        .description(" api para gerenciamento de operações com drones em campo. Deve Permite cadastrar, " +
+                                "listar, atualizar e deletar, alem de registrar os voos realizados " +
                                 "por cada drone."));
     }
 }

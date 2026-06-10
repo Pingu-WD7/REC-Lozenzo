@@ -1,5 +1,6 @@
 package org.example.dronelog.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.example.dronelog.dto.PilotoRequestDTO;
 import org.example.dronelog.dto.PilotoResponseDTO;
@@ -20,12 +21,14 @@ public class PilotoController {
         this.pilotoService = pilotoService;
     }
 
+    @Operation(summary = "Lista todos os pilotos com filro opcional por nome")
     @GetMapping
     public List<PilotoResponseDTO> listar(@RequestParam(required = false) String nome) {
         // TODO: adaptar a listagem para aceitar uma consulta simples.
         return pilotoService.listar(nome);
     }
 
+    @Operation(summary = "Busca um piloto por ID")
     @PutMapping("/{id}")
     public PilotoResponseDTO atualizar(@PathVariable Long id, @RequestBody @Valid PilotoRequestDTO dto) {
         // TODO: finalizar o fluxo de atualização.
